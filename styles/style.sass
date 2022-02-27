@@ -1,0 +1,77 @@
+// sizes
+$title-font-size: 6.2rem
+$keys-font-size: 2.6rem
+$keys-info-font-size: 1.8rem
+$key-size: 90px
+
+// colors
+$dark: #202020
+$gray: #333533
+$clear: #fbfbfb
+$yellow: #FFD100
+$yellow-light: #FFEE32
+
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+html
+    font-size: 62.5%
+
+body
+    width: 100vw
+    height: 100vh
+    background-color: $dark
+
+    main
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        .title
+            font-size: $title-font-size
+            color: $clear
+            margin-bottom: 100px
+
+        .keys
+            width: ($key-size) * 11
+            height: 500px
+            display: grid
+            justify-content: center
+            grid-template-columns: repeat(auto-fill, minmax($key-size, 1fr))
+            grid-auto-rows: $key-size
+            grid-gap: 15px
+            justify-items: center
+
+.key
+    display: block
+    width: $key-size
+    height: $key-size
+    border: solid 3px $clear
+    border-radius: 50%
+    color: $clear
+    background-color: $gray
+    transition: transform 0.1s, border 0.1s, color 0.1s, box-shadow 0.1s
+
+    .key__name
+        font-size: 2.4rem
+        margin-bottom: 5px
+
+    .key__info
+        font-size: 1rem
+
+.key__active
+    transform: scale(85%)
+    border: solid 3px $yellow-light
+    color: $yellow-light
+    box-shadow: 1px 1px 26px 5px $yellow-light
+    -webkit-box-shadow: 1px 1px 26px 5px $yellow-light
+    -moz-box-shadow: 1px 1px 26px 5px $yellow-light
+
+@media only screen and (max-width: 1000px)
+    body main .keys
+        width: 90%
