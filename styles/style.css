@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Oswald", sans-serif;
 }
 
 body {
@@ -22,9 +23,10 @@ body main {
   justify-content: center;
 }
 body main .title {
-  font-size: 6.2rem;
-  color: #fbfbfb;
+  font-size: 8.2rem;
+  color: #FFEE32;
   margin-bottom: 100px;
+  text-decoration: underline;
 }
 body main .keys {
   width: 990px;
@@ -42,7 +44,7 @@ body main .keys {
   width: 90px;
   height: 90px;
   border: solid 3px #fbfbfb;
-  border-radius: 50%;
+  border-radius: 5px;
   color: #fbfbfb;
   background-color: #333533;
   transition: transform 0.1s, border 0.1s, color 0.1s, box-shadow 0.1s;
